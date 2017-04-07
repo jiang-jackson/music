@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>音乐列表</title>
+    <style type="text/css">
+        .list-group li{
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .panel-heading{
+            font-size: 24px;
+        }
+        .css_btn_class {
+            text-decoration: none;
+            font-size:17px;
+            font-family:Arial Black;
+            font-weight:normal;
+            -moz-border-radius:25px;
+            -webkit-border-radius:25px;
+            border-radius:25px;
+            border:1px solid #74b807;
+            padding:9px 19px;
+            text-decoration:none;
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(30%, #89c403), color-stop(75%, #77a809) );
+            background:-moz-linear-gradient( center top, #89c403 30%, #77a809 75% );
+            background:-ms-linear-gradient( top, #89c403 30%, #77a809 75% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809');
+            background-color:#89c403;
+            color:#ffffff;
+            display:inline-block;
+            text-shadow:1px 1px 0px #528009;
+            -webkit-box-shadow: -1px 1px 0px 0px #a4e271;
+            -moz-box-shadow: -1px 1px 0px 0px #a4e271;
+            box-shadow: -1px 1px 0px 0px #a4e271;
+        }.css_btn_class:hover {
+             background:-webkit-gradient( linear, left top, left bottom, color-stop(30%, #77a809), color-stop(75%, #89c403) );
+             background:-moz-linear-gradient( center top, #77a809 30%, #89c403 75% );
+             background:-ms-linear-gradient( top, #77a809 30%, #89c403 75% );
+             filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403');
+             background-color:#77a809;
+             text-decoration: none;
+         }.css_btn_class:active {
+              position:relative;
+              top:1px;
+          }
+        /* CSS按钮生成器 */
+    </style>
+    </style>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                                                                             <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+                                                                                                                                                     <![endif]-->
+    </head>
+      <body>
+      <div style="background: url(1.jpg);">
+
+
+
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default" style="background:url(2.jpg);">
+    <div class="container-fluid  container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+                                             <span class="icon-bar"></span>
+                                                                      <span class="icon-bar"></span>
+                                                                                               <span class="icon-bar"></span>
+                                                                                                                        </button>
+                                                                                                                          <a class="navbar-brand" href="#">音乐</a>
+                                                                                                                                                               </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">音乐专辑 <span class="sr-only">(current)</span></a></li>
+
+                                                                                    </ul>
+
+                                                                                      <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">注册</a></li>
+                            <li><a href="#">登录</a></li>
+
+                                                    </ul>
+                                                      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="container-fluid container">
+    <div class="row">
+    <!-- 右侧导航栏 -->
+    <div class="col-sm-3">
+    <div class="panel panel-primary" style="background:url(2.jpg);">
+    <div class="panel-heading">音乐特色榜</div>
+
+                                      <ul class="list-group">
+    <li class="list-group-item" id="newsong">云音乐新歌榜</li>
+                                                     <li class="list-group-item" id="hotsong">云音乐热歌榜</li>
+                                                                                                      <li class="list-group-item" id="original">原创歌曲榜</li>
+                                                                                                                                                       <li class="list-group-item" id="sift">热歌精选</li>
+
+                                                                                                                                                                                                   </ul>
+                                                                                                                                                                                                     </div>
+                                                                                                                                                                                                       </div>
+                                                                                                                                                                                                         <div class="col-sm-9">
+    <div class="row" id="mydiv">
+
+
+    </div>
+
+      <div class="row" id="mydiv1">
+
+
+    </div>
+      <div class="row" id="mydiv2">
+
+
+    </div>
+
+      <div class="row" id="mydiv3">
+
+
+    </div>
+
+      </div>
+
+
+
+
+
+        </div>
+          </div>
+            </div>
+
+
+
+              <div id="mymusic" style="width: 400px;height: 400px;position: fixed;left: 450px;top: 100px;display: none;z-index: 102;background-color: #fff;text-align: center;">
+    <span style="position: absolute;top: 8px;right: 8px;font-size: 24px;cursor: pointer;" id="myspan"><i class="glyphicon glyphicon-remove"></i></span>
+    <!-- <div class="row"> -->
+    <div style="margin-top: 20px;">
+    <img src="" id="myimage" width="200" height="200">
+    <h4>专辑 : <span id="myzhuanji"></span></h4>
+                                           </div>
+                                             <div>
+                                             <h4>歌曲名 : <span id="title"></span></h4>
+                                                                                 <h4>作者 : <span id="author"></span></h4>
+
+                                                                                                                     <a class="css_btn_class" href="" id="xiazai"> 下载</a>
+    <!-- //<a href="#" class="">css button</a> -->
+
+    </div>
+
+    <!-- </div> -->
+
+    </div>
+      </div>
+        <footer style="text-align: center;background-color: #dcdcdc;">
+    <div>
+     意见反馈  联系我们  帮助中心  资源合作开放平台  原创音乐人  ©2017 Baidu 使用百度前必读 文网文[2010]197号
+    </div>
+                                                                              </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+                                        <script type="text/javascript">
+    var hotsong = $("#hotsong");
+    var newsong = $("#newsong");
+    var original = $("#original");
+    var sift = $("#sift");
+    var mydiv = document.getElementById('mydiv');
+    var mydiv1 = $("#mydiv1");
+    var mydiv2 = $("#mydiv2");
+    var mydiv3 = $("#mydiv3");
+    var s = 0;
+
+    newsong.bind("click",function(){
+        window.location.reload(true);
+    })
+
+
+
+
+    // 1.创建对象
+    // 热歌榜
+        $.ajax({
+    url : "http://tingapi.ting.baidu.com/v1/restserver/ting",
+    type: "post",
+    data : {
+        method : "baidu.ting.billboard.billList",
+        type : 2,
+        size : 20,
+        offset : 0,
+
+    },
+    dataType : "jsonp",
+    success : function(data){
+    // console.log(data);
+    // return data;
+    hotsong.bind("click",function(){
+        s++;
+        mydiv.style.display = "none";
+    xinge(data);
+    });
+    function xinge(data){
+    // console.log(data);
+        list = data.song_list;
+        len = list.length;
+        for (var i = 0; i < len; i++) {
+        var divs = new creatediv(list[i],i);
+    }
+    }
+    },
+    error : function(d){
+        console.log(d);
+    },
+    })
+    // console.log(data);
+
+    // 新歌榜
+       var script = document.createElement('script');
+    script.src = 'http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.billboard.billList&type=1&size=20&offset=0&callback=jiang';
+    document.body.appendChild(script);
+    function jiang(data) {
+        console.log(data);
+    // var img = document.getElementsByTagName('img')[0];
+    // img.src = data.song_list[0].pic_big;
+        list = data.song_list;
+        len = list.length;
+        for (var i = 0; i < len; i++) {
+        var divs = new creatediv(list[i],i);
+    }
+
+
+    }
+
+
+    // 原创歌曲榜
+$.ajax({
+    url : "http://tingapi.ting.baidu.com/v1/restserver/ting",
+    type: "post",
+    data : {
+        method : "baidu.ting.billboard.billList",
+        type : 24,
+        size : 20,
+        offset : 0,
+
+    },
+    dataType : "jsonp",
+    success : function(data){
+    // console.log(data);
+    // return data;
+    original.bind("click",function(){
+        s++;
+        mydiv.style.display = "none";
+        mydiv1.css("display","none");
+    xinge(data);
+    });
+    function xinge(data){
+    // console.log(data);
+        list = data.song_list;
+        len = list.length;
+        for (var i = 0; i < len; i++) {
+        var divs = new creatediv(list[i],i);
+    }
+    }
+    },
+    error : function(d){
+        console.log(d);
+    },
+    })
+
+
+
+    function creatediv(data,i){
+
+        this.div1 = null;
+        this.div2 = null;
+        this.div3 = null;
+        this.img = null;
+        this.h3 = null;
+        this.p = null;
+    this.create = function() {
+        i++
+        this.div1 = document.createElement('div');
+        this.div1.className = "col-sm-3";
+        this.div1.style.height= '310px';
+        this.div1.style.marginTop = "10px";
+        this.div1.style.cursor = "pointer";
+    // this.div1.dataToggle="modal";
+    // this.div1.dataTarget="#myModal";
+        this.div1.setAttribute("onclick","kak("+i+");");
+    // this.div1.setAttribute("data-toggle","model");
+    // this.div1.setAttribute("data-target","#myModal");
+        this.div2 = document.createElement('div');
+        this.div2.className = "thumbnail";
+
+        this.div3 = document.createElement('div');
+        this.div3.className = "caption";
+
+        this.img = document.createElement('img');
+        this.img.src = data.pic_big;
+        this.img.style.height = "200px";
+        this.div2.appendChild(this.img);
+        this.h3 = document.createElement('h5');
+        this.h3.innerHTML = data.title;
+        this.div3.appendChild(this.h3);
+        this.p = document.createElement('p');
+        this.p.innerHTML = "作者: " + data.author;
+        this.div3.appendChild(this.p);
+        this.div2.appendChild(this.div3);
+        this.div1.appendChild(this.div2);
+    if (s==1) {
+        mydiv1.append(this.div1);
+    }else{
+         mydiv.appendChild(this.div1);
+     }
+
+
+    }
+    this.create();
+    }
+    var myimage = document.getElementById('myimage');
+    var myspan = document.getElementById('myspan');
+    var mymusic = document.getElementById('mymusic');
+    var myzhuanji = document.getElementById('myzhuanji');
+    var title = document.getElementById('title');
+    var author = document.getElementById('author');
+    var xiazai = document.getElementById("xiazai");
+    function kak(data){
+        mymusic.style.display = "block";
+        myimage.src = list[data-1].pic_big;
+        title.innerHTML = list[data-1].title;
+        author.innerHTML = list[data-1].author;
+        myzhuanji.innerHTML = list[data-1].album_title;
+        xiazai.href = list[data-1].lrclink;
+
+    }
+    myspan.onclick = function(evt){
+        mymusic.style.display = "none";
+    }
+    </script>
+      </body>
+        </html>
